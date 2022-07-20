@@ -7,14 +7,15 @@ class app_test_case(unittest.TestCase):
 
 
     def setUp(self):
-        chromeOptions = Options()
-        driver_path = '/usr/local/bin/chromedriver'
+        chromeOptions = webdriver.ChromeOptions()
+        #driver_path = '/usr/local/bin/chromedriver'
+        river_path = "/opt/chromedriver"
         chromeOptions.add_argument('--headless')
         chromeOptions.add_argument('--disable-gpu')
         chromeOptions.add_argument('--no-sandbox')
 
 
-        self.driver = webdriver.Chrome(driver_path, chrome_options=Options)
+        self.driver = webdriver.Chrome(driver_path, options=chromeOptions)
         self.driver.implicitly_wait(30)
         self.driver.maximize_window()
         path = 'https://www.facebook.com/'
