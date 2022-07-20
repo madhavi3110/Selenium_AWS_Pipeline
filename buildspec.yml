@@ -1,0 +1,11 @@
+version: 0.2
+
+
+phases:
+  install:
+    commands:
+       - pip install -U -r requirements.txt
+       - sh install_driver.sh 
+  build:
+    commands:
+       - python app.py
