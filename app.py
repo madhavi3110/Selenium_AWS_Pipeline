@@ -8,8 +8,8 @@ class app_test_case(unittest.TestCase):
 
     def setUp(self):
         chromeOptions = webdriver.ChromeOptions()
-        #driver_path = '/usr/local/bin/chromedriver'
-        driver_path = "/opt/chromedriver"
+        driver_path = '/usr/local/bin/chromedriver'
+        #driver_path = "/opt/chromedriver"
         chromeOptions.add_argument('--headless')
         chromeOptions.add_argument('--disable-gpu')
         chromeOptions.add_argument('--no-sandbox')
