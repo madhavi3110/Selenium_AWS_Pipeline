@@ -1,4 +1,5 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 import unittest
 from time import sleep
 
@@ -6,7 +7,7 @@ class app_test_case(unittest.TestCase):
 
 
     def setUp(self):
-        chromeOptions = webdriver.ChromeOptions()
+        chromeOptions = Options()
         driver_path = '/usr/local/bin/chromedriver'
         chromeOptions.add_argument('--headless')
         chromeOptions.add_argument('--disable-gpu')
