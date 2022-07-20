@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+options = Options()
 import unittest
 from time import sleep
 
@@ -7,7 +8,7 @@ class app_test_case(unittest.TestCase):
 
 
     def setUp(self):
-        chromeOptions = webdriver.ChromeOptions()
+        #chromeOptions = webdriver.ChromeOptions()
         driver_path = '/usr/local/bin/chromedriver'
         #driver_path = "/opt/chromedriver"
         chromeOptions.add_argument('--headless')
@@ -15,7 +16,8 @@ class app_test_case(unittest.TestCase):
         chromeOptions.add_argument('--no-sandbox')
 
 
-        self.driver = webdriver.Chrome(driver_path, options=chromeOptions)
+        #self.driver = webdriver.Chrome(driver_path, options=chromeOptions)
+        self.driver = webdriver.Chrome(driver_path, options=options)
         self.driver.implicitly_wait(30)
         self.driver.maximize_window()
         path = 'https://www.facebook.com/'
