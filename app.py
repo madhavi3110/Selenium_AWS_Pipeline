@@ -7,7 +7,8 @@ class app_test_case(unittest.TestCase):
 
 
     def setUp(self):
-        chromeOptions = webdriver.ChromeOptions()
+        #chromeOptions = webdriver.ChromeOptions()
+        chromeOptions = Options()
         driver_path = '/usr/local/bin/chromedriver'
         #driver_path = "/opt/chromedriver"
         #Changed 'chromeOptions' to 'options'
