@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-declare -A chrome_versions
+#declare -A chrome_versions
 
 # Enter the list of browsers to be downloaded
 ### Using Chromium as documented here - https://www.chromium.org/getting-involved/download-chromium
